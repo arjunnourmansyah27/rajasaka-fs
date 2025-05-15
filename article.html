@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <title>Artikel Rajasaka Food Solution</title>
+  </head>
+  <body>
+    <header class="bg-[#21201e] text-white">
+      <div class="flex items-center justify-between px-6 py-4 lg:px-20">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#">
+            <img
+              src="./img/logo-rajasaka.webp"
+              alt="Logo Rajasaka"
+              class="w-16 h-18"
+            />
+          </a>
+        </div>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden lg:flex space-x-8" id="navbar">
+          <a
+            href="index.html#"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Beranda</a
+          >
+          <a
+            href="index.html#produk"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Produk</a
+          >
+          <a
+            href="index.html#testimoni"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Testimoni</a
+          >
+          <a
+            href="#"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Blog</a
+          >
+          <a
+            href="index.html#contact"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Tentang Kami</a
+          >
+        </nav>
+
+        <!-- Hamburger -->
+        <div
+          class="lg:hidden flex flex-col space-y-1 cursor-pointer"
+          id="hamburger"
+        >
+          <div class="w-6 h-0.5 bg-white"></div>
+          <div class="w-6 h-0.5 bg-white"></div>
+          <div class="w-6 h-0.5 bg-white"></div>
+        </div>
+      </div>
+
+      <!-- Menu Mobile (Hidden by default) -->
+      <nav
+        class="lg:hidden flex flex-col items-center space-y-4 hidden"
+        id="mobile-menu"
+      >
+        <a href="#" class="font-semibold text-white py-2">Beranda</a>
+        <a href="#produk" class="font-semibold text-white py-2">Produk</a>
+        <a href="#testimoni" class="font-semibold text-white py-2">Testimoni</a>
+        <a href="#blog" class="font-semibold text-white py-2">Blog</a>
+        <a href="#contact" class="font-semibold text-white py-2"
+          >Tentang Kami</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <!-- Blog Article - Artikel 1 -->
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl">
+          <div class="flex justify-between items-center mb-6">
+            <div class="flex w-full sm:items-center gap-x-5 sm:gap-x-3">
+              <div class="shrink-0">
+                <img
+                  class="size-12 rounded-full"
+                  src="img/rfs.webp"
+                  alt="Avatar"
+                />
+              </div>
+              <div class="grow">
+                <div class="flex justify-between items-center gap-x-2">
+                  <div>
+                    <div
+                      class="hs-tooltip [--trigger:hover] [--placement:bottom] inline-block"
+                    >
+                      <div
+                        class="hs-tooltip-toggle sm:mb-1 block text-start cursor-pointer"
+                      >
+                        <span class="font-semibold text-gray-800">
+                          Rajasaka Food Solution</span
+                        >
+                      </div>
+                    </div>
+                    <ul class="text-xs text-gray-500">
+                      <li
+                        class="inline-block relative pe-6 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-2 before:-translate-y-1/2 before:size-1 before:bg-gray-300 before:rounded-full"
+                      >
+                        13 Mei 2025
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-5 md:space-y-8">
+            <div class="space-y-3">
+              <h2 class="text-2xl font-bold md:text-3xl">
+                Cara Mudah Punya Bisnis yang Cuan, Cocok Buat Pemula!
+              </h2>
+              <p class="text-lg text-gray-800">
+                Ingin punya bisnis sendiri tapi bingung mulai dari mana? Tenang!
+                Kini, cara mudah punya bisnis yang cuan bisa kamu mulai tanpa
+                harus punya pengalaman atau modal besar. Banyak orang sukses
+                memulai bisnis kecil-kecilan yang akhirnya jadi sumber
+                penghasilan utama. Berikut langkah-langkah mudah yang bisa kamu
+                ikuti :
+              </p>
+            </div>
+            <figure>
+              <img
+                class="w-full object-cover rounded-xl"
+                src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+                alt="Blog Image"
+              />
+              <figcaption class="mt-3 text-sm text-center text-gray-500">
+                Cara Mudah Punya Bisnis yang Cuan, Cocok Buat Pemula!
+              </figcaption>
+            </figure>
+            <ol start="1" class="number-list space-y-3">
+              <li>Pilih Bisnis Sesuai Passion dan Tren Cari ide bisnis kekinian seperti jualan online, reseller produk viral, atau bisnis makanan kekinian. Pastikan kamu memilih yang sesuai dengan hobi atau keahlianmu.</li>
+              <li>Manfaatkan Media Sosial Gunakan TikTok Shop, Instagram Reels, dan WhatsApp Business untuk promosi gratis. Ini cara cepat untuk menjangkau banyak pelanggan tanpa bayar iklan mahal.
+              </li>
+              <li>Mulai dengan Sistem Pre-Order Biar gak rugi, mulai dengan sistem pre-order. Kamu cuma perlu cari pembeli dulu sebelum produksi barang.
+              </li>
+              <li>Gabung Platform Dropship Kalau kamu gak punya stok, bisa banget mulai dari bisnis dropship tanpa modal. Banyak supplier di marketplace seperti Shopee, Tokopedia, dan TikTok yang membuka peluang ini.
+              </li>
+              <li>Gunakan Tools Gratis Manfaatkan aplikasi gratis seperti Canva untuk desain promosi, dan Google Form untuk riset pasar atau pemesanan.</li>
+            </ol>
+            <p class="text-lg text-gray-800 font-bold">
+              ✅ Tips Sukses: Konsisten promosi setiap hari, pantau tren, dan
+              jangan takut belajar digital marketing!
+            </p>
+            <hr class="my-8 border-t-4 border-gray-300 opacity-50" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Article - Artikel 2 -->
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl">
+          <div class="flex justify-between items-center mb-6">
+            <div class="flex w-full sm:items-center gap-x-5 sm:gap-x-3">
+              <div class="shrink-0">
+                <img
+                  class="size-12 rounded-full"
+                  src="img/rfs.webp"
+                  alt="Avatar"
+                />
+              </div>
+              <div class="grow">
+                <div class="flex justify-between items-center gap-x-2">
+                  <div>
+                    <div
+                      class="hs-tooltip [--trigger:hover] [--placement:bottom] inline-block"
+                    >
+                      <div
+                        class="hs-tooltip-toggle sm:mb-1 block text-start cursor-pointer"
+                      >
+                        <span class="font-semibold text-gray-800">
+                          Rajasaka Food Solution</span
+                        >
+                      </div>
+                    </div>
+                    <ul class="text-xs text-gray-500">
+                      <li
+                        class="inline-block relative pe-6 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-2 before:-translate-y-1/2 before:size-1 before:bg-gray-300 before:rounded-full"
+                      >
+                        14 Mei 2025
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-5 md:space-y-8">
+            <div class="space-y-3">
+              <h2 class="text-2xl font-bold md:text-3xl">
+                Meningkatkan Kualitas Produk Kuliner yang Kompetitif
+              </h2>
+              <p class="text-lg text-gray-800">
+                Dalam bisnis kuliner, kualitas produk adalah kunci utama untuk
+                memenangkan persaingan. Berikut adalah beberapa cara untuk
+                meningkatkan kualitas produk kuliner kamu:
+              </p>
+            </div>
+            <figure>
+              <img
+                class="w-full object-cover rounded-xl"
+                src="https://images.unsplash.com/photo-1606787005052-baf1e7b3a03d?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjQzZXwwfDF8c2VhY2h8Mnx8aW5zdGFndW5pdHklMjBjdWxpbmV8ZW58MHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080"
+                alt="Blog Image"
+              />
+              <figcaption class="mt-3 text-sm text-center text-gray-500">
+                Meningkatkan Kualitas Produk Kuliner yang Kompetitif
+              </figcaption>
+            </figure>
+            <ol start="1" class="number-list space-y-3">
+              <li>Gunakan Bahan Baku Berkualitas</li>
+              <li>Inovasi Menu Sesuai Tren</li>
+              <li>Perhatikan Presentasi Makanan</li>
+              <li>Konsisten dengan Standar Kebersihan</li>
+            </ol>
+            <p class="text-lg text-gray-800 font-bold">
+              ✅ Tips Sukses: Konsisten menjaga kualitas produk dari awal hingga
+              akhir!
+            </p>
+            <hr class="my-8 border-t-4 border-gray-300 opacity-50" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Article - Artikel 3 -->
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl">
+          <div class="flex justify-between items-center mb-6">
+            <div class="flex w-full sm:items-center gap-x-5 sm:gap-x-3">
+              <div class="shrink-0">
+                <img
+                  class="size-12 rounded-full"
+                  src="img/rfs.webp"
+                  alt="Avatar"
+                />
+              </div>
+              <div class="grow">
+                <div class="flex justify-between items-center gap-x-2">
+                  <div>
+                    <div
+                      class="hs-tooltip [--trigger:hover] [--placement:bottom] inline-block"
+                    >
+                      <div
+                        class="hs-tooltip-toggle sm:mb-1 block text-start cursor-pointer"
+                      >
+                        <span class="font-semibold text-gray-800">
+                          Rajasaka Food Solution</span
+                        >
+                      </div>
+                    </div>
+                    <ul class="text-xs text-gray-500">
+                      <li
+                        class="inline-block relative pe-6 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-2 before:-translate-y-1/2 before:size-1 before:bg-gray-300 before:rounded-full"
+                      >
+                        15 Mei 2025
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-5 md:space-y-8">
+            <div class="space-y-3">
+              <h2 class="text-2xl font-bold md:text-3xl">
+                Digital Marketing untuk Bisnis Kuliner
+              </h2>
+              <p class="text-lg text-gray-800">
+                Di era digital seperti sekarang, pemasaran online sangat
+                berpengaruh bagi perkembangan bisnis kuliner. Berikut beberapa
+                strategi digital marketing yang dapat kamu terapkan:
+              </p>
+            </div>
+            <figure>
+              <img
+                class="w-full object-cover rounded-xl"
+                src="https://images.unsplash.com/photo-1604416449656-1a62c578b2b4?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjQzZXwwfDF8c2VhY2h8NXx8YmlzbmVzcyUyMGdvb2dsZXxlbnwwfHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080"
+                alt="Blog Image"
+              />
+              <figcaption class="mt-3 text-sm text-center text-gray-500">
+                Digital Marketing untuk Bisnis Kuliner
+              </figcaption>
+            </figure>
+            <ol start="1" class="number-list space-y-3">
+              <li>Optimalkan Website untuk SEO</li>
+              <li>Gunakan Iklan Berbayar untuk Promosi</li>
+              <li>Manfaatkan Media Sosial untuk Interaksi</li>
+              <li>Jadikan Influencer sebagai Mitra</li>
+            </ol>
+            <p class="text-lg text-gray-800 font-bold">
+              ✅ Tips Sukses: Fokus pada interaksi dengan pelanggan melalui media sosial!
+            </p>
+            <hr class="my-8 border-t-4 border-gray-300 opacity-50" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Article - Artikel 4 -->
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl">
+          <div class="flex justify-between items-center mb-6">
+            <div class="flex w-full sm:items-center gap-x-5 sm:gap-x-3">
+              <div class="shrink-0">
+                <img
+                  class="size-12 rounded-full"
+                  src="img/rfs.webp"
+                  alt="Avatar"
+                />
+              </div>
+              <div class="grow">
+                <div class="flex justify-between items-center gap-x-2">
+                  <div>
+                    <div
+                      class="hs-tooltip [--trigger:hover] [--placement:bottom] inline-block"
+                    >
+                      <div
+                        class="hs-tooltip-toggle sm:mb-1 block text-start cursor-pointer"
+                      >
+                        <span class="font-semibold text-gray-800">
+                          Rajasaka Food Solution</span
+                        >
+                      </div>
+                    </div>
+                    <ul class="text-xs text-gray-500">
+                      <li
+                        class="inline-block relative pe-6 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-2 before:-translate-y-1/2 before:size-1 before:bg-gray-300 before:rounded-full"
+                      >
+                        16 Mei 2025
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-5 md:space-y-8">
+            <div class="space-y-3">
+              <h2 class="text-2xl font-bold md:text-3xl">
+                Mengelola Keuangan dalam Bisnis Kuliner
+              </h2>
+              <p class="text-lg text-gray-800">
+                Keuangan yang sehat adalah fondasi dari bisnis yang sukses. Untuk
+                itu, berikut adalah cara mengelola keuangan dengan bijak dalam
+                bisnis kuliner:
+              </p>
+            </div>
+            <figure>
+              <img
+                class="w-full object-cover rounded-xl"
+                src="https://images.unsplash.com/photo-1595492684909-fd6c5cdb5adf?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjQzZXwwfDF8c2VhY2h8Mnx8YmlzbmVzcyUyMGdvb2dsZXxlbnwwfHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080"
+                alt="Blog Image"
+              />
+              <figcaption class="mt-3 text-sm text-center text-gray-500">
+                Mengelola Keuangan dalam Bisnis Kuliner
+              </figcaption>
+            </figure>
+            <ol start="1" class="number-list space-y-3">
+              <li>Catat Semua Pemasukan dan Pengeluaran</li>
+              <li>Siapkan Dana Darurat untuk Bisnis</li>
+              <li>Gunakan Software Keuangan untuk Membantu Pengelolaan</li>
+              <li>Pastikan Marginal Keuntungan Sesuai Target</li>
+            </ol>
+            <p class="text-lg text-gray-800 font-bold">
+              ✅ Tips Sukses: Kelola keuangan dengan hati-hati untuk menghindari
+              kerugian!
+            </p>
+            <hr class="my-8 border-t-4 border-gray-300 opacity-50" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

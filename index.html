@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <!--untuk logo di atas-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- icon -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- SwiperJS CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rajasaka Food Solution</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-[#21201e] text-white">
+      <div class="flex items-center justify-between px-6 py-4 lg:px-20">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#">
+            <img
+              src="./img/logo-rajasaka.webp"
+              alt="Logo Rajasaka"
+              class="w-16 h-18"
+            />
+          </a>
+        </div>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden lg:flex space-x-8" id="navbar">
+          <a
+            href="#"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Beranda</a
+          >
+          <a
+            href="#produk"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Produk</a
+          >
+          <a
+            href="#testimoni"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Testimoni</a
+          >
+          <a
+            href="#blog"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Blog</a
+          >
+          <a
+            href="#about"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Tentang Kami</a
+          >
+        </nav>
+
+        <!-- Hamburger -->
+        <div
+          class="lg:hidden flex flex-col space-y-1 cursor-pointer"
+          id="hamburger"
+        >
+          <div class="w-6 h-0.5 bg-white"></div>
+          <div class="w-6 h-0.5 bg-white"></div>
+          <div class="w-6 h-0.5 bg-white"></div>
+        </div>
+      </div>
+
+      <!-- Menu Mobile (Hidden by default) -->
+      <nav
+        class="lg:hidden flex flex-col items-center space-y-4 hidden"
+        id="mobile-menu"
+      >
+        <a href="#" class="font-semibold text-white py-2">Beranda</a>
+        <a href="#produk" class="font-semibold text-white py-2">Produk</a>
+        <a href="#testimoni" class="font-semibold text-white py-2">Testimoni</a>
+        <a href="#blog" class="font-semibold text-white py-2">Blog</a>
+        <a href="#about" class="font-semibold text-white py-2"
+          >Tentang Kami</a
+        >
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-20 py-8 lg:py-16 min-h-screen bg-[#21201e]"
+    >
+      <!-- Text -->
+      <div class="text-center lg:text-left max-w-xl mb-4" data-aos="fade-up">
+        <h1
+          class="text-2xl lg:text-5xl font-bold leading-tight mb-4 text-white"
+        >
+          Kemitraan Bisnis Kuliner<br />
+          Tanpa Biaya Franchise,<br />
+          Harga Terjangkau & Bisa<br />
+          Langsung Jualan!
+        </h1>
+        <p class="text-base lg:text-lg mb-6 leading-relaxed text-white">
+          Miliki Bisnis Kuliner Yang Mudah Dijalankan dan Terbukti Menguntungkan
+        </p>
+        <a
+          href="#why-choose-us"
+          class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-6 rounded-md text-sm lg:text-base transition"
+        >
+          Pelajari Selengkapnya
+        </a>
+      </div>
+
+      <!-- Image Slider -->
+      <div class="mb-10 lg:mb-0 w-full max-w-md mx-auto relative shadow-lg-custom"
+        data-aos="fade-up">
+        <!-- Slider Images -->
+        <div id="slider" class="slider-img relative overflow-hidden">
+          <div class="flex transition-transform duration-500"
+            id="slider-images">
+            <div class="img-slider flex-shrink-0 w-full relative">
+              <img
+                src="./img/sate1.webp"
+                alt="Chef 1"
+                class="absolute top-0 left-0 w-full h-full object-cover rounded-lg"/>
+            </div>
+            <div class="img-slider flex-shrink-0 w-full relative">
+              <img
+                src="./img/sate2.webp"
+                alt="Chef 2"
+                class="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+              />
+            </div>
+            <div
+              class="img-slider flex-shrink-0 w-full relative"
+            >
+              <img
+                src="./img/sate1.webp"
+                alt="Chef 2"
+                class="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <button
+          class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-yellow-600 text-white p-2 rounded-full shadow-lg"
+          id="prev"
+        >
+          &#8592;
+        </button>
+        <button
+          class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-yellow-600 text-white p-2 rounded-full shadow-lg"
+          id="next"
+        >
+          &#8594;
+        </button>
+      </div>
+    </section>
+
+    <main>
+      <!-- WhatsApp Logo -->
+      <div
+        class="fixed bottom-6 right-6 z-50 flex items-center space-x-2 bg-[#F3F3F3] rounded-full px-3 py-2 shadow-lg hover:shadow-xl transition-all duration-300 border-4 border-green-700"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        <a
+          href="https://wa.me/6287781965378"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center space-x-2"
+        >
+          <img
+            class="wa-transtition"
+            src="img/WhatsApp.svg"
+            alt="WhatsApp Logo"
+            width="40"
+            height="40"
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          />
+          <span class="wa-text text-green-700 font-bold blink">
+            Hubungi Kami!
+          </span>
+        </a>
+      </div>
+
+      <!-- why choose rajasaka -->
+      <section class="max-w-6xl mx-auto px-4 py-24" id="why-choose-us">
+        <h2
+          class="text-2xl md:text-3xl font-bold text-center text-[#cca741] mb-10"
+          data-aos="fade-up"
+        >
+          Mengapa Memilih Rajasaka Food Kuliner?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Card 1 -->
+          <div class="flex items-center space-x-4" data-aos="fade-up">
+            <img
+              src="./img/logo/logo1.webp"
+              alt="No Fee"
+              class="w-36 h-36 md:w-48 md:h-48 object-contain"
+            />
+            <div class="text-left">
+              <h3 class="text-[#cca741] font-semibold text-lg md:text-2xl">
+                Tanpa Biaya Franchise & Royalti
+              </h3>
+              <p class="text-sm md:text-base text-[#444444]">
+                Keuntungan bisnis 100% untuk mitra.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="flex items-center space-x-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="./img/logo/logo4.webp "
+              alt="Paket Lengkap"
+              class="w-36 h-36 md:w-48 md:h-48 object-contain"
+            />
+            <div class="text-left">
+              <h3 class="text-[#cca741] font-semibold text-lg md:text-2xl">
+                Paket Usaha Lengkap
+              </h3>
+              <p class="text-sm md:text-base text-[#444444]">
+                Dapatkan booth, peralatan masak, bahan baku, dan kemasan.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="flex items-center space-x-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="./img/logo/logo2.webp"
+              alt="Harga Terjangkau"
+              class="w-36 h-36 md:w-48 md:h-48 object-contain"
+            />
+            <div class="text-left">
+              <h3 class="text-[#cca741] font-semibold text-lg md:text-2xl">
+                Harga Kemitraan Terjangkau
+              </h3>
+              <p class="text-sm md:text-base text-[#444444]">
+                Mulai usaha kuliner dengan modal ringan.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="flex items-center space-x-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <img
+              src="./img/logo/logo3.webp"
+              alt="Pelatihan Bisnis"
+              class="w-36 h-36 md:w-48 md:h-48 object-contain"
+            />
+            <div class="text-left">
+              <h3 class="text-[#cca741] font-semibold text-lg md:text-2xl">
+                Pelatihan & Pembinaan Bisnis
+              </h3>
+              <p class="text-sm md:text-base text-[#444444]">
+                Siap mendukung hingga usaha Anda laris.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- produk unggulan kami -->
+      <section
+        id="produk"
+        class="bg-img1 min-h-screen flex flex-col items-center justify-between px-6 lg:px-20 py-16 bg-cover bg-center"
+      >
+        <!-- Konten Teks -->
+        <div class="text-center max-w-xl mb-12">
+          <h1
+            class="text-2xl md:text-3xl font-bold text-white leading-tight mb-6"
+          >
+            Produk Unggulan Kami
+          </h1>
+        </div>
+
+        <!-- Card Produk -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-screen-xl"
+        >
+          <!-- Card 1 -->
+          <div
+            class="relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            data-aos="zoom-in-down"
+          >
+            <div class="w-full h-full">
+              <img
+                src="./img/banner web-01.png"
+                alt="Produk 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <button
+              class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md"
+            >
+              Lihat
+            </button>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            data-aos="zoom-in-down"
+          >
+            <div class="w-full h-full">
+              <img
+                src="./img/banner web-02.png"
+                alt="Produk 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <button
+              class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md"
+            >
+              Lihat
+            </button>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            data-aos="zoom-in-down"
+          >
+            <div class="w-full h-full">
+              <img
+                src="./img/makanan1.jpg"
+                alt="Produk 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <button
+              class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md"
+            >
+              Lihat
+            </button>
+          </div>
+        </div>
+
+        <!-- Tombol Lihat Produk Lainnya -->
+        <div class="mt-6">
+          <a
+            href="#"
+            class="inline-block py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md text-sm lg:text-base"
+          >
+            Lihat Produk Lainnya
+          </a>
+        </div>
+      </section>
+
+      <!-- testimoni -->
+      <section class="py-24" id="testimoni">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-16">
+            <h2
+              class="text-2xl md:text-3xl text-center font-bold text-[#cca741]"
+            >
+              Kata Mereka Tentang Rajasaka Food Solution
+            </h2>
+          </div>
+          <!--Slider wrapper-->
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper w-max">
+              <div class="swiper-slide">
+                <div
+                  class="group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500 w-full mx-auto hover:border-[#cca741] hover:shadow-sm slide_active:border-[#cca741]"
+                >
+                  <div class="">
+                    <div
+                      class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        viewBox="0 0 18 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                          fill="#cca741"
+                        />
+                      </svg>
+                      <span class="text-base font-semibold text-[#cca741]"
+                        >5.0</span
+                      >
+                    </div>
+                    <p
+                      class="text-base text-gray-600 leading-6 transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800"
+                    >
+                      Makanannya nggak ada yang ngecewain, dan sangat sat set.
+                      Keren emang the best!
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5"
+                  >
+                    <img
+                      class="rounded-full h-10 w-10 object-cover"
+                      src="./img/review/Andrea Dwi.webp"
+                      alt="avatar"
+                    />
+                    <div class="block">
+                      <h5
+                        class="text-gray-600 font-medium transition-all duration-500 mb-1"
+                      >
+                        Andrea Dwi Cahyo
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div
+                  class="group bg-white border border-solid border-gray-300 flex justify-between flex-col rounded-xl p-6 transition-all duration-500 w-full mx-auto hover:border-[#cca741] slide_active:border-[#cca741] hover:shadow-sm"
+                >
+                  <div class="">
+                    <div
+                      class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        viewBox="0 0 18 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                          fill="#cca741"
+                        />
+                      </svg>
+                      <span class="text-base font-semibold text-[#cca741]"
+                        >5.0</span
+                      >
+                    </div>
+                    <p
+                      class="text-base text-gray-600 leading-6 transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800"
+                    >
+                      Recommended, dengan harga segitu udah bagus banget!
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200"
+                  >
+                    <img
+                      class="rounded-full h-10 w-10 object-cover"
+                      src="./img/review/Parnap.webp"
+                      alt="avatar"
+                    />
+                    <div class="block">
+                      <h5
+                        class="text-gray-600 font-medium transition-all duration-500 mb-1"
+                      >
+                        Parnap M
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div
+                  class="flex justify-between flex-col lg:w-full group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500 w-full mx-auto slide_active:border-[#cca741] hover:border-[#cca741] hover:shadow-sm"
+                >
+                  <div class="">
+                    <div
+                      class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        viewBox="0 0 18 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                          fill="#cca741"
+                        />
+                      </svg>
+                      <span class="text-base font-semibold text-[#cca741]"
+                        >5.0</span
+                      >
+                    </div>
+                    <p
+                      class="text-base text-gray-600 leading-6 transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800"
+                    >
+                      Makanannya enak bgt, cepat, fresh semua makannya, aku
+                      nyobain ramennya enak bgt asli base kuahnya, dan harga nya
+                      affordable cocok sama kantong
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5"
+                  >
+                    <img
+                      class="rounded-full h-10 w-10 object-cover"
+                      src="./img/review/Ahmad Wafie.webp"
+                      alt="avatar"
+                    />
+                    <div class="block">
+                      <h5
+                        class="text-gray-600 font-medium transition-all duration-500 mb-1"
+                      >
+                        Ahmad Wafie
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div
+                  class="group bg-white border border-solid border-gray-300 rounded-xl p-6 transition-all duration-500 w-full mx-auto slide_active:border-[#cca741] hover:border-[#cca741] hover:shadow-sm"
+                >
+                  <div class="">
+                    <div
+                      class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        viewBox="0 0 18 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                          fill="#cca741"
+                        />
+                      </svg>
+                      <span class="text-base font-semibold text-[#cca741]"
+                        >5.0</span
+                      >
+                    </div>
+                    <p
+                      class="text-base text-gray-600 leading-6 transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800"
+                    >
+                      Pilihan menu nya banyaak dan harga nya sangat terjangkau.
+                      Service nya juga enak dan ramah bangett. Sukaa 🫶
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-5 border-t border-solid border-gray-200 pt-5"
+                  >
+                    <img
+                      class="rounded-full h-10 w-10 object-cover"
+                      src="./img/review/Intan Ratnasari.webp"
+                      alt="avatar"
+                    />
+                    <div class="block">
+                      <h5
+                        class="text-gray-600 font-medium transition-all duration-500 mb-1"
+                      >
+                        Intan Ratnasari
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div
+                  class="group bg-white border border-solid border-gray-300 flex justify-between flex-col rounded-xl p-6 transition-all duration-500 w-full mx-auto slide_active:border-[#cca741] hover:border-[#cca741] hover:shadow-sm"
+                >
+                  <div class="">
+                    <div
+                      class="flex items-center mb-7 gap-2 text-amber-500 transition-all duration-500"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        viewBox="0 0 18 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                          fill="#cca741"
+                        />
+                      </svg>
+                      <span class="text-base font-semibold text-[#cca741]"
+                        >5.0</span
+                      >
+                    </div>
+                    <p
+                      class="text-base text-gray-600 leading-6 transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800"
+                    >
+                      Rasa Makanan nya enak, tempat nya bersih, pelayan nya baik
+                      baik dan ramah.
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center gap-5 pt-5 border-t border-solid border-gray-200"
+                  >
+                    <img
+                      class="rounded-full h-10 w-10 object-cover"
+                      src="./img/review/Rafli Abdullah.webp"
+                      alt="avatar"
+                    />
+                    <div class="block">
+                      <h5
+                        class="text-gray-600 font-medium transition-all duration-500 mb-1"
+                      >
+                        Rafli Abdullah
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- paket usaha -->
+      <section class="bg-[#21201e] py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2
+            class="text-2xl md:text-3xl font-bold text-center text-[#cca741] mb-12"
+          >
+            Paket Usaha Lengkap Siap Jualan!
+          </h2>
+          <div class="grid md:grid-cols-3 gap-10">
+            <!-- Card 1 -->
+            <div class="flex flex-col items-center text-center space-y-4">
+              <img
+                src="https://img.icons8.com/ios-filled/100/cca741/market-square.png"
+                alt="Booth Portable"
+                class="w-16 h-16"
+              />
+              <h3 class="text-xl font-semibold text-[#cca741]">
+                Stan Portable
+              </h3>
+              <p class="text-white/80 text-sm">
+                Tempat berjualan yang estetik dan fungsional
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex flex-col items-center text-center space-y-4">
+              <img
+                src="https://img.icons8.com/ios-filled/100/cca741/kitchen-room.png"
+                alt="Peralatan Masak"
+                class="w-16 h-16"
+              />
+              <h3 class="text-xl font-semibold text-[#cca741]">
+                Peralatan Masak
+              </h3>
+              <p class="text-white/80 text-sm">
+                Kompor, wajan, baskom dan berbagai alat masak lainnya
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex flex-col items-center text-center space-y-4">
+              <img
+                src="https://img.icons8.com/ios-filled/100/cca741/ingredients.png"
+                alt="Bahan Baku Awal"
+                class="w-16 h-16"
+              />
+              <h3 class="text-xl font-semibold text-[#cca741]">
+                Bahan Baku Awal
+              </h3>
+              <p class="text-white/80 text-sm">
+                Mendapat bahan baku awal agar bisa langsung berjualan
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flex flex-col items-center text-center space-y-4">
+              <img
+                src="https://img.icons8.com/ios-filled/100/cca741/packaging.png"
+                alt="Kemasan Awal"
+                class="w-16 h-16"
+              />
+              <h3 class="text-xl font-semibold text-[#cca741]">Kemasan Awal</h3>
+              <p class="text-white/80 text-sm">
+                Mendapat kemasan awal untuk jualan hari pertama
+              </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="flex flex-col items-center text-center space-y-4">
+              <img
+                src="https://img.icons8.com/ios-filled/100/cca741/cooking-book.png"
+                alt="Peltihan Memasak"
+                class="w-16 h-16"
+              />
+              <h3 class="text-xl font-semibold text-[#cca741]">
+                Pelatihan Memasak
+              </h3>
+              <p class="text-white/80 text-sm">
+                Pelatihan memasak sampai bisa atau mahir
+              </p>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="flex flex-col items-center text-center space-y-4">
+              <img
+                src="https://img.icons8.com/ios-filled/100/cca741/business.png"
+                alt="Pembinaan Bisnis"
+                class="w-16 h-16"
+              />
+              <h3 class="text-xl font-semibold text-[#cca741]">
+                Pembinaan Bisnis
+              </h3>
+              <p class="text-white/80 text-sm">
+                Pembinaan bisnis sampai jualan laris
+              </p>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="flex justify-center mt-12">
+            <a
+              href="https://wa.me/6287781965378"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#CCA741] text-white font-bold px-8 py-2 rounded-lg shadow-lg hover:bg-[#E1BC54] transition"
+            >
+              Ya, Saya Berminat!
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cara bergabung -->
+      <section class="bg-gradient-to-b from-white via-gray-50 to-white py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2
+            class="text-2xl md:text-3xl font-bold text-center text-[#cca741] mb-12"
+          >
+            Cara Bergabung Menjadi Mitra
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Gambar -->
+            <div class="flex justify-center">
+              <img
+                src="./img/logo/gabung.webp"
+                alt="Join Now"
+                class="w-3/4 md:w-2/3 object-contain"
+              />
+            </div>
+
+            <!-- List Step -->
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-8 h-8 bg-[#cca741] text-white rounded-full flex items-center justify-center shadow-md"
+                  >
+                    ✔
+                  </div>
+                </div>
+                <p class="ml-4 text-lg text-gray-700 leading-relaxed">
+                  Pilih paket kemitraan yang sesuai dengan kebutuhan Anda.
+                </p>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-8 h-8 bg-[#cca741] text-white rounded-full flex items-center justify-center shadow-md"
+                  >
+                    ✔
+                  </div>
+                </div>
+                <p class="ml-4 text-lg text-gray-700 leading-relaxed">
+                  Konsultasikan dengan tim kami untuk mendapatkan informasi
+                  lebih lanjut.
+                </p>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-8 h-8 bg-[#cca741] text-white rounded-full flex items-center justify-center shadow-md"
+                  >
+                    ✔
+                  </div>
+                </div>
+                <p class="ml-4 text-lg text-gray-700 leading-relaxed">
+                  Dapatkan pelatihan memasak dan semua perlengkapan usaha.
+                </p>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div
+                    class="w-8 h-8 bg-[#cca741] text-white rounded-full flex items-center justify-center shadow-md"
+                  >
+                    ✔
+                  </div>
+                </div>
+                <p class="ml-4 text-lg text-gray-700 leading-relaxed">
+                  Mulai berjualan di lokasi yang Anda tentukan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-12">
+          <a
+            href="https://wa.me/6287781965378"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-[#CCA741] text-white font-bold px-8 py-2 rounded-lg shadow-lg hover:bg-[#E1BC54] transition"
+          >
+            Ya, Saya Berminat!
+          </a>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section id="blog" class="py-24 bg-[#21201e]">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8"
+          >
+            <div class="w-full flex justify-between flex-col lg:w-2/5">
+              <div class="block lg:text-left text-center">
+                <h2
+                  class="text-4xl font-bold text-white leading-[3.25rem] mb-5"
+                >
+                  Tips Bisnis<span class="text-[#CCA741]"> Kuliner</span>
+                </h2>
+                <p class="text-white mb-10 max-lg:max-w-xl max-lg:mx-auto">
+                  Selamat datang di bagian blog kami, tempat di mana pengetahuan
+                  bertemu dengan inspirasi. Temukan artikel menarik, tips ahli,
+                  dan tren terbaru seputar dunia bisnis kuliner.
+                </p>
+                <a
+                  href="article.html"
+                  class="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-[#CCA741] font-semibold transition-all duration-300 hover:bg-[#CCA741] hover:text-white"
+                  >Lihat Semua</a
+                >
+              </div>
+            </div>
+            <div class="w-full lg:w-3/5">
+              <!--Slider wrapper-->
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide w-full max-lg:max-w-xl lg:w-1/2 group">
+                    <div class="flex items-center mb-9">
+                      <img
+                        src="https://pagedone.io/asset/uploads/1696244059.png"
+                        alt="blogs tailwind section"
+                        class="rounded-2xl w-full object-cover"/>
+                    </div>
+                    <h3 class="text-xl text-white font-medium leading-8 mb-4 group-hover:text-[#CCA741]">
+                      Cara Mudah Punya Bisnis yang Cuan, Cocok Buat Pemula!
+                    </h3>
+                    <p
+                      class="text-[#CACACA] leading-6 transition-all duration-500 mb-8">
+                      Ingin punya bisnis sendiri tapi bingung mulai dari mana?
+                      Tenang! Kini, cara mudah punya bisnis yang cuan bisa kamu
+                      mulai tanpa harus punya pengalaman atau modal besar.
+                      Banyak orang sukses memulai bisnis kecil-kecilan
+                    </p>
+                    <a href="#" class="cursor-pointer flex items-center gap-2 text-lg text-[#CCA741] font-semibold">Selengkapnya<svg
+                        width="15"
+                        height="12"
+                        viewBox="0 0 15 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5"
+                          stroke="#CCA741"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide w-full max-lg:max-w-xl lg:w-1/2 group">
+                    <div class="flex items-center mb-9">
+                      <img
+                        src="https://pagedone.io/asset/uploads/1696244074.png"
+                        alt="blogs tailwind section"
+                        class="rounded-2xl w-full object-cover"
+                      />
+                    </div>
+                    <h3 class="text-xl text-white font-medium leading-8 mb-4 group-hover:text-[#CCA741]">
+                      Optimasi Instagram Untuk Pemasaran Bisnis Kuliner
+                    </h3>
+                    <p class="text-[#CACACA] leading-6 transition-all duration-500 mb-8">
+                      Temukan cara terbaik untuk memaksimalkan potensi Instagram
+                      dalam memasarkan bisnis kuliner Anda. Dapatkan tips dan
+                      strategi untuk menjangkau lebih banyak pelanggan..
+                    </p>
+                    <a
+                      href="javascript:;"
+                      class="cursor-pointer flex items-center gap-2 text-lg text-[#CCA741] font-semibold">Selengkapnya<svg
+                        width="15"
+                        height="12"
+                        viewBox="0 0 15 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5"
+                          stroke="#CCA741"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="swiper-slide w-full max-lg:max-w-xl lg:w-1/2 group">
+                    <div class="flex items-center mb-9">
+                      <img
+                        src="https://pagedone.io/asset/uploads/1696244059.png"
+                        alt="blogs tailwind section"
+                        class="rounded-2xl w-full object-cover"
+                      />
+                    </div>
+                    <h3
+                      class="text-xl text-white font-medium leading-8 mb-4 group-hover:text-[#CCA741]"
+                    >
+                      Clever ways to invest in product to organize your
+                      portfolio
+                    </h3>
+                    <p
+                      class="text-[#CACACA] leading-6 transition-all duration-500 mb-8"
+                    >
+                      Discover smart investment strategies to streamline and
+                      organize your portfolio. Explore innovative approaches to
+                      optimize your...
+                    </p>
+                    <a
+                      href="javascript:;"
+                      class="cursor-pointer flex items-center gap-2 text-lg text-[#CCA741] font-semibold"
+                    >
+                      Selengkapnya<svg
+                        width="15"
+                        height="12"
+                        viewBox="0 0 15 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5"
+                          stroke="#CCA741"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div
+                    class="swiper-slide w-full max-lg:max-w-xl lg:w-1/2 group"
+                  >
+                    <div class="flex items-center mb-9">
+                      <img
+                        src="https://pagedone.io/asset/uploads/1696244074.png"
+                        alt="blogs tailwind section"
+                        class="rounded-2xl w-full object-cover"
+                      />
+                    </div>
+                    <h3
+                      class="text-xl text-white font-medium leading-8 mb-4 group-hover:text-[#CCA741]"
+                    >
+                      How to grow your profit through systematic investment with
+                      us
+                    </h3>
+                    <p
+                      class="text-[#CACACA] leading-6 transition-all duration-500 mb-8"
+                    >
+                      Unlock the power of systematic investment with us and
+                      watch your profits soar. Our expert team will guide you on
+                      the path to financial..
+                    </p>
+                    <a
+                      href="javascript:;"
+                      class="cursor-pointer flex items-center gap-2 text-lg text-[#CCA741] font-semibold"
+                    >
+                      Seleng<svg
+                        width="15"
+                        height="12"
+                        viewBox="0 0 15 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5"
+                          stroke="#CCA741"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ/ Yang sering di tanyakan -->
+      <section id="faq" class="max-w-3xl mx-auto p-4">
+        <h2
+          class="text-2xl md:text-3xl font-bold text-center mb-12 md:mt-8 text-[#cca741]"
+        >
+          Yang Sering Ditanyakan
+        </h2>
+
+        <div class="space-y-4 text-[16px] md:text-[20px]">
+          <!-- FAQ Item -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-4 text-left bg-gray-100 hover:bg-gray-200 transition"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="font-semibold text-gray-800"
+                >Apa saja keuntungan menjadi mitra kami?</span
+              >
+              <svg
+                class="w-5 h-5 text-gray-600 transition-transform duration-300"
+                fill="none"
+                stroke="#cca741"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="px-4 pb-4 hidden">
+              <p class="text-gray-600 mt-2">
+                Menjadi mitra kami memberikan Anda akses ke merek yang sudah
+                dikenal, sistem operasional yang teruji, dukungan pemasaran,
+                pelatihan komprehensif, dan potensi keuntungan yang menarik di
+                industri kemitraan makanan.
+                <a href="#" class="text-blue-500 text-sm mt-2 inline-block"
+                  >Selengkapnya →</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-4 text-left bg-gray-100 hover:bg-gray-200 transition"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="font-semibold text-gray-800"
+                >Bagaimana cara memulai kemitraan</span
+              >
+              <svg
+                class="w-5 h-5 text-gray-600 transition-transform duration-300"
+                fill="none"
+                stroke="#cca741"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="px-4 pb-4 hidden">
+              <p class="text-gray-600 mt-2">
+                Anda dapat menghubungi tim kemitraan kami langsung melalui
+                WhatsApp di nomor yang tertera di website kami. Kami akan segera
+                merespons pertanyaan Anda dan memandu Anda melalui proses
+                aplikasi kemitraan selanjutnya.
+                <a href="#" class="text-blue-500 text-sm mt-2 inline-block"
+                  >Selengkapnya →</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-4 text-left bg-gray-100 hover:bg-gray-200 transition"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="font-semibold text-gray-800"
+                >Apa saja yang didapat dalam paket kemitraan?</span
+              >
+              <svg
+                class="w-5 h-5 text-gray-600 transition-transform duration-300"
+                fill="none"
+                stroke="#cca741"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="px-4 pb-4 hidden">
+              <p class="text-gray-600 mt-2">
+                Dalam paket kemitraan Master Kuliner, mitra akan menerima
+                booth/gerobak siap pakai, peralatan masak lengkap, bahan baku
+                awal, kemasan produk, serta pelatihan memasak dan pembinaan
+                bisnis berkelanjutan. Semua kebutuhan usaha dipersiapkan agar
+                Anda bisa langsung berjualan dengan mudah dan efektif.
+                <a href="#" class="text-blue-500 text-sm mt-2 inline-block"
+                  >Selengkapnya →</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-4 text-left bg-gray-100 hover:bg-gray-200 transition"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="font-semibold text-gray-800"
+                >Apakah ada biaya royalti yang perlu dibayar?</span
+              >
+              <svg
+                class="w-5 h-5 text-gray-600 transition-transform duration-300"
+                fill="none"
+                stroke="#cca741"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="px-4 pb-4 hidden">
+              <p class="text-gray-600 mt-2">
+                Tidak ada biaya royalti yang perlu dibayar. Master Kuliner
+                menawarkan model kemitraan tanpa biaya franchise dan tanpa biaya
+                royalti, sehingga semua keuntungan sepenuhnya milik kamu. Kami
+                berkomitmen untuk membantu mitra mencapai kesuksesan tanpa
+                membebani dengan biaya tambahan.
+                <a href="#" class="text-blue-500 text-sm mt-2 inline-block"
+                  >Selengkapnya →</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full p-4 text-left bg-gray-100 hover:bg-gray-200 transition"
+              onclick="toggleAccordion(this)"
+            >
+              <span class="font-semibold text-gray-800"
+                >Apakah mitra baru mendapat pelatihan dari Rajasaka Food
+                Solution?</span
+              >
+              <svg
+                class="w-5 h-5 text-gray-600 transition-transform duration-300"
+                fill="none"
+                stroke="#cca741"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="px-4 pb-4 hidden">
+              <p class="text-gray-600 mt-2">
+                Ya, setiap mitra baru akan mendapatkan pelatihan lengkap dari PT
+                Rajasaka Food Solution, mulai dari teknik penyajian makanan,
+                manajemen operasional, hingga layanan pelanggan. Kami pastikan
+                semua mitra siap menjalankan bisnis dengan standar yang tinggi.
+                <a href="#" class="text-blue-500 text-sm mt-2 inline-block"
+                  >Selengkapnya →</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mb-24"></div>
+      </section>
+<!-- about us Rajasaka Food Solution -->
+<section id="about" class="bg-[#21201e] min-h-screen bg-cover flex items-center justify-center py-16">
+  <div class="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-6">
+      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Tentang <span class="text-[#CCA741]">Rajasaka Food Solution</span></h2>
+          <p class="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
+          <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-8">
+          <img class="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1">
+          <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2">
+      </div>
+  </div>
+</section>
+
+      <section class="bg-why2 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-cover bg-center">
+        <!-- Konten Teks -->
+        <div class="text-center lg:text-left max-w-xl">
+          <h1 class="text-3xl lg:text-5xl font-bold text-white leading-tight mb-6">
+            Sudah Siapkah Kamu<br />
+            Menjadi Pengusaha<br />
+            Kuliner Yang Sukses?
+          </h1>
+          <p class="text-white text-base lg:text-lg mb-8 leading-relaxed">
+            Saatnya Wujudkan Impianmu Menjadi Pengusaha Kuliner Yang Sukses
+            Bersama PT Rajasaka Food Solution!
+          </p>
+          <a href="#" class="inline-block bg-[#21201e] text-white font-semibold py-3 px-6 rounded-md text-sm lg:text-base transition">
+            Beli Kemitraan Bisnis Kuliner Terbaik
+          </a>
+        </div>
+        <!-- Gambar -->
+        <div class="mb-10 lg:mb-0">
+          <img
+            src="./img/logo-rajasaka.webp"
+            alt="Pengusaha Kuliner"
+            class="max-w-xs lg:max-w-md mx-auto"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#21201e] text-[#cca741] px-6 py-10">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Logo dan Deskripsi -->
+        <div class="text-center lg:text-left">
+          <img
+            src="./img/logo-rajasaka.webp"
+            alt="Logo Perusahaan"
+            class="w-24 mb-6 mx-auto lg:mx-0"
+          />
+          <p
+            class="text-sm text-[#cca741] lg:text-left leading-relaxed max-w-md mx-auto lg:mx-0"
+          >
+            Rajasaka Food Solution adalah penyedia solusi makanan terpercaya
+            untuk kebutuhan kuliner Anda, menghadirkan cita rasa terbaik dengan
+            layanan profesional.
+          </p>
+        </div>
+
+        <!-- Hubungi Kami -->
+        <div class="text-center">
+          <h3 class="text-lg font-semibold mb-4 text-[#cca741]">
+            Hubungi Kami
+          </h3>
+          <ul class="text-sm space-y-2 text-[#cca741]">
+            <li>
+              <i class="fas fa-map-marker-alt mr-2 text-[#cca741] text-xl"></i>
+              Jl. Perdamaian No. F12, RT.4/RW.6, Tanah Baru, Kecamatan Beji,
+              Kota Depok, Jawa Barat 16426
+            </li>
+            <li>
+              <i class="fab fa-whatsapp mr-2 text-[#cca741] text-xl"></i>
+              +62 87781965378 (WhatsApp)
+            </li>
+          </ul>
+        </div>
+
+        <!-- Ikuti Kami -->
+        <div class="flex flex-col items-center">
+          <h3 class="text-lg font-semibold mb-4 text-[#cca741] text-center">
+            Ikuti Kami
+          </h3>
+          <div class="flex space-x-4">
+            <a
+              href="https://www.instagram.com/rajasakafoodsolution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              aria-label="Instagram"
+            >
+              <i
+                class="fab fa-instagram text-[#cca741] text-3xl hover:opacity-75 transition duration-300"
+              ></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Lokasi Maps -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-[#cca741] text-center">
+            Lokasi Kami
+          </h3>
+          <div class="w-full h-40 overflow-hidden rounded-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.172026685273!2d106.80192761022323!3d-6.371778893591805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef8eb2372ce5%3A0x2ae772b62c1d83da!2sBotanical%20Puri%20Asri!5e0!3m2!1sid!2sid!4v1745654341313!5m2!1sid!2sid"
+              class="w-full h-full border-0"
+              allowfullscreen=""
+              title="Google Maps"
+            >
+            </iframe>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.172026685273!2d106.80192761022323!3d-6.371778893591805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef8eb2372ce5%3A0x2ae772b62c1d83da!2sBotanical%20Puri%20Asri!5e0!3m2!1sid!2sid!4v1745654341313!5m2!1sid!2sid"
+              class="w-full h-full border-0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center text-xs mt-10 text-[#cca741]">
+        © 2025 Rajasaka Food Solution. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- JAVASCRIPT untuk hamburger menu-->
+<script src="JS/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 6,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>

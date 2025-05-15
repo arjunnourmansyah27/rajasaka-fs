@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.whatsapp-logo {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.swiper-slide {
+  transform: scale(0.9);
+  transition: transform 0.4s ease;
+}
+.swiper-slide-active {
+  transform: scale(1);
+}
+
+ /* Animasi kedip */
+ @keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Terapkan animasi kedip pada teks "Hubungi Kami" */
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* background img */
+.bg-img1 {
+  background-image: url('./img/bg-why2.webp'); /* Gambar untuk background */
+  background-size: cover;  /* Memastikan gambar mengisi seluruh area */
+  background-repeat: no-repeat; /* Gambar tidak akan diulang */
+  background-position: center center; /* Gambar tetap di tengah */
+  width: auto; /* Lebar kontainer */
+  height: auto; /* Tinggi mengikuti tinggi layar */
+}
+
+.wa-text {
+  margin-left: 8px
+}
+
+.wa-transtition {
+  transition: transform 0.3s
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            width: 16px !important;
+            height: 4px !important;
+            border-radius: 5px !important;
+            margin: 0 6px !important;
+        }
+
+        .swiper-pagination {
+            bottom: 2px !important;
+        }
+
+        .swiper-wrapper {
+            height: max-content !important;
+            width: max-content !important;
+            padding-bottom: 64px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #cca741 !important;
+        }
+
+        /* Menambahkan min-height untuk memastikan ukuran card sama */
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Menjaga agar konten di dalam card tetap rapi */
+}
+
+.group {
+  min-height: 350px; /* Menetapkan tinggi minimum untuk card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-base {
+  flex-grow: 1; /* Membuat area teks fleksibel dan memanfaatkan ruang kosong */
+}
+
+/* Custom shadow with color #cca741 and offset downwards */
+.shadow-lg-custom {
+  box-shadow: 20px 10px 80px rgba(204, 167, 65, 0.5); /* Shadow with color #cca741 */
+}
+
+.bg-why2 {
+  background-image: url('./img/bg-why2.webp'); /* Gambar untuk background why*/
+}
+
+
+/* Mengatur animasi dan visibilitas menu */
+#mobile-menu {
+  display: none; /* Default tersembunyi */
+  background-color: #21201e;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+#mobile-menu.show {
+  display: flex; /* Menampilkan menu saat tombol hamburger diklik */
+  transition: max-height 0.3s ease-in-out;
+}
+
+#hamburger.open div:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: center;
+  position: relative;
+  top: 6px;
+}
+
+#hamburger.open div:nth-child(2) {
+  opacity: 0; /* Menyembunyikan garis tengah */
+}
+
+#hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: center;
+  position: relative;
+  bottom: 6px;
+}
+
+/* Menambahkan efek pada menu item */
+#mobile-menu a {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+#mobile-menu a:hover {
+  color: #f1c40f;
+}
+
+
+/* Menyesuaikan ukuran button di layar kecil (mobile) */
+@media (max-width: 767px) {
+  .fixed {
+    bottom: 3rem; /* Mengatur jarak lebih kecil dari bawah */
+    right: 3rem; /* Mengatur jarak lebih kecil dari kanan */
+  }
+  
+  .fixed .wa-transtition {
+    width: 30px; /* Mengurangi ukuran ikon WhatsApp */
+    height: 30px; /* Mengurangi ukuran ikon WhatsApp */
+  }
+
+  .fixed .wa-text {
+    font-size: 0.875rem; /* Mengurangi ukuran font */
+    padding-left: 5px; /* Memberikan sedikit ruang antara teks dan ikon */
+  }
+
+  .fixed {
+    padding: 8px 12px; /* Mengurangi padding agar lebih kecil */
+  }
+}
+
+/* list artikel */
+.number-list {
+  list-style-type: decimal;
+  padding-left: 25px;
+}
+
+.img-slider {
+  padding-top: 100%;
+}
