@@ -109,6 +109,7 @@ body {
 
 .bg-why2 {
   background-image: url('./img/bg-why2.webp'); /* Gambar untuk background why*/
+  padding-bottom:0% !important;
 }
 
 

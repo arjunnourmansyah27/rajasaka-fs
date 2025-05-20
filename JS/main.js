@@ -65,3 +65,4 @@ function toggleAccordion(element) {
     svgIcon.classList.remove("rotate-180");
   }
 }
+
