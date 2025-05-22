@@ -187,3 +187,8 @@ body {
 .img-slider {
   padding-top: 100%;
 }
+
+/* Tambahkan animasi untuk tombol lihat semua produk saat hover */
+#lihat-produk-btn:hover svg {
+  transform: translateY(8px);
+}

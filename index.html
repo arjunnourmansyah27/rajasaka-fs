@@ -278,23 +278,25 @@
       </section>
 
       <!-- produk unggulan kami -->
-    <section id="produk" class="bg-img1 min-h-screen flex flex-col items-center justify-between px-6 lg:px-20 py-16 bg-cover bg-center">
+      <section
+  id="produk"
+  class="bg-img1 min-h-screen flex flex-col items-center justify-between px-6 lg:px-20 py-16 bg-cover bg-center"
+>
   <!-- Judul -->
   <div class="text-center max-w-xl mb-12">
-    <h1
-      class="text-2xl md:text-3xl font-bold text-white leading-tight mb-6"
-    >
+    <h1 class="text-2xl md:text-3xl font-bold text-white leading-tight mb-6">
       Produk Unggulan Kami
     </h1>
   </div>
 
   <!-- Grid Card -->
   <div
+    id="produk-grid"
     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-screen-xl"
   >
     <!-- Card 1 Donat -->
     <div
-      class="relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+      class="produk-card relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
       data-aos="zoom-in-down"
     >
       <div class="relative w-full" style="padding-top: 100%;">
@@ -327,10 +329,11 @@
       </div>
     </div>
 
-    <!-- Card 2 Sate Kulit-->
+    <!-- Card 2 Sate Kulit -->
     <div
-      class="relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-      data-aos="zoom-in-down">
+      class="produk-card relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+      data-aos="zoom-in-down"
+    >
       <div class="relative w-full" style="padding-top: 100%;">
         <div class="swiper produk-swiper absolute top-0 left-0 w-full h-full">
           <div class="swiper-wrapper">
@@ -349,16 +352,16 @@
                   class="absolute top-0 left-0 w-full h-full object-cover"
                 />
               </div>
-            </div>            
+            </div>
             <div class="swiper-slide">
               <div class="relative w-full pt-[100%]">
                 <img
                   src="./img/sate2.webp"
-                  alt="Produk 2 - Foto 2"
+                  alt="Produk 2 - Foto 3"
                   class="absolute top-0 left-0 w-full h-full object-cover"
                 />
               </div>
-            </div>            
+            </div>
           </div>
 
           <div class="swiper-pagination"></div>
@@ -372,9 +375,9 @@
       </div>
     </div>
 
-    <!-- Card 3 Pentol-->
+    <!-- Card 3 Pentol -->
     <div
-      class="relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+      class="produk-card relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
       data-aos="zoom-in-down"
     >
       <div class="relative w-full" style="padding-top: 100%;">
@@ -397,7 +400,7 @@
             <div class="swiper-slide">
               <img
                 src="./img/makanan/cilok.webp"
-                alt="Produk 3 - Foto 2"
+                alt="Produk 3 - Foto 3"
                 class="w-full h-full object-cover"
               />
             </div>
@@ -413,18 +416,201 @@
         </button>
       </div>
     </div>
+
+    <!-- Card 4 (tersembunyi) -->
+    <div
+      class="produk-card hidden relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+      data-aos="zoom-in-down"
+    >
+    <div class="relative w-full" style="padding-top: 100%;">
+      <div class="swiper produk-swiper absolute top-0 left-0 w-full h-full">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="./img/banner_3.webp"
+              alt="Produk 3 - Foto 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/makanan/cilok2.webp"
+              alt="Produk 3 - Foto 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/makanan/cilok.webp"
+              alt="Produk 3 - Foto 3"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <button
+        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md z-10"
+      >
+        Lihat
+      </button>
+    </div>
+    </div>
+
+    <!-- Card 5 (tersembunyi) -->
+    <div
+      class="produk-card hidden relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+      data-aos="zoom-in-down"
+    >
+    <div class="relative w-full" style="padding-top: 100%;">
+      <div class="swiper produk-swiper absolute top-0 left-0 w-full h-full">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="./img/banner_3.webp"
+              alt="Produk 3 - Foto 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/makanan/cilok2.webp"
+              alt="Produk 3 - Foto 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/makanan/cilok.webp"
+              alt="Produk 3 - Foto 3"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <button
+        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md z-10"
+      >
+        Lihat
+      </button>
+    </div>
+    </div>
+
+    <!-- Card 6 (tersembunyi) -->
+    <div
+      class="produk-card hidden relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+      data-aos="zoom-in-down"
+    >
+    <div class="relative w-full" style="padding-top: 100%;">
+      <div class="swiper produk-swiper absolute top-0 left-0 w-full h-full">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="./img/banner_3.webp"
+              alt="Produk 3 - Foto 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/makanan/cilok2.webp"
+              alt="Produk 3 - Foto 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/makanan/cilok.webp"
+              alt="Produk 3 - Foto 3"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <button
+        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md z-10"
+      >
+        Lihat
+      </button>
+    </div>
+    </div>
+
+    <!-- Card 7 (tersembunyi) -->
+    <div
+      class="produk-card hidden relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+      data-aos="zoom-in-down"
+    >
+    <div class="relative w-full" style="padding-top: 100%;">
+      <div class="swiper produk-swiper absolute top-0 left-0 w-full h-full">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="./img/banner_3.webp"
+              alt="Produk 3 - Foto 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/makanan/cilok2.webp"
+              alt="Produk 3 - Foto 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/makanan/cilok.webp"
+              alt="Produk 3 - Foto 3"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <button
+        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md z-10"
+      >
+        Lihat
+      </button>
+    </div>
+    </div>
   </div>
 
   <!-- Tombol Lihat Produk Lainnya -->
   <div class="mt-6">
-    <a
-      href="#"
-      class="inline-block py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md text-sm lg:text-base"
+    <button
+      id="lihat-produk-btn"
+      class="inline-flex items-center py-2 px-4 bg-[#cca741] hover:bg-[#E2B331] text-white font-semibold rounded-md text-sm lg:text-base"
     >
       Lihat Produk Lainnya
-    </a>
+      <!-- Ikon panah ke bawah -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="ml-2 w-4 h-4 transform transition-transform duration-300"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 3a1 1 0 011 1v7.585l2.707-2.707a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 11.585V4a1 1 0 011-1z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </button>
   </div>
 </section>
+
 
       <!-- testimoni -->
       <section class="py-24" id="testimoni">

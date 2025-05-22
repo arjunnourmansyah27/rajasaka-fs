@@ -66,3 +66,13 @@ function toggleAccordion(element) {
   }
 }
 
+// button lihat keseluruhan produk
+const btn = document.getElementById('lihat-produk-btn');
+        const produkCards = document.querySelectorAll('#produk-grid .produk-card');
+    
+        btn.addEventListener('click', () => {
+          produkCards.forEach((card) => {
+            card.classList.remove('hidden');
+          });
+          btn.style.display = 'none'; // sembunyikan tombol setelah klik
+        });
