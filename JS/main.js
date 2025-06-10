@@ -4,7 +4,7 @@ const nextButton = document.getElementById("next");
 const sliderImages = document.getElementById("slider-images");
 
 let currentIndex = 0;
-const totalImages = 4;
+const totalImages = 5;
 
 // Function to show the next image
 function showNextImage() {
