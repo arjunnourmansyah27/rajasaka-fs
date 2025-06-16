@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+
+    <title>RajaPentol Bang Inan</title>
+  </head>
+  <body>
+    <header class="bg-[#21201e] text-white">
+      <div class="flex items-center justify-between px-6 py-4 lg:px-20">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#">
+            <img
+              src="./img/logo-rajasaka.webp"
+              alt="Logo Rajasaka"
+              class="w-16 h-18"
+            />
+          </a>
+        </div>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden lg:flex space-x-8" id="navbar">
+          <a
+            href="index.html#"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Beranda</a
+          >
+          <a
+            href="index.html#produk"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Produk</a
+          >
+          <a
+            href="index.html#testimoni"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Testimoni</a
+          >
+          <a
+            href="#"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Blog</a
+          >
+          <a
+            href="index.html#about"
+            class="font-semibold hover:text-yellow-500 hover:scale-105 transition-all duration-300"
+            >Tentang Kami</a
+          >
+        </nav>
+
+        <!-- Hamburger -->
+        <div
+          class="lg:hidden flex flex-col space-y-1 cursor-pointer"
+          id="hamburger"
+        >
+          <div class="w-6 h-0.5 bg-white"></div>
+          <div class="w-6 h-0.5 bg-white"></div>
+          <div class="w-6 h-0.5 bg-white"></div>
+        </div>
+      </div>
+
+      <!-- Menu Mobile (Hidden by default) -->
+      <nav
+        class="lg:hidden flex flex-col items-center space-y-4 hidden"
+        id="mobile-menu"
+      >
+        <a href="#" class="font-semibold text-white py-2">Beranda</a>
+        <a href="#produk" class="font-semibold text-white py-2">Produk</a>
+        <a href="#testimoni" class="font-semibold text-white py-2">Testimoni</a>
+        <a href="#blog" class="font-semibold text-white py-2">Blog</a>
+        <a href="#contact" class="font-semibold text-white py-2"
+          >Tentang Kami</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="flex justify-center">
+        <div class="relative">
+          <img
+            src="img/booth/pentol.webp"
+            alt="Vertical Image"
+            class="w-auto max-w-full h-auto max-h-[230vh] object-contain"
+          />
+        </div>
+      </section>
+
+      <section
+        id="hubungi-kami"
+        class="fixed bottom-0 left-0 w-full bg-white py-4 z-50 mt-10"
+      >
+        <div class="max-w-screen-xl mx-auto px-4">
+          <a
+            href="https://wa.me/6287781965378?text=Saya%20Minat%20Jadi%20Mitra%20RajaPentol Bang Inan%20Saya%20Dapat%20Info%20dari%20Website%20Rajasaka%20Food%20Solution"
+            class="flex items-center justify-center bg-[#61ce70] text-white py-3 px-6 rounded-lg text-lg hover:bg-[#128c7e] transition duration-300 font-bold"
+          >
+            <i class="fab fa-whatsapp mr-3"></i> Hubungi Admin
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- JAVASCRIPT untuk hamburger menu-->
+<script src="JS/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
