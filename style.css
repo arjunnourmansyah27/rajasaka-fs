@@ -192,3 +192,7 @@ body {
 #lihat-produk-btn:hover svg {
   transform: translateY(8px);
 }
+
+.underline-wa-footer{
+  text-decoration: underline;
+}
